@@ -1,5 +1,50 @@
 %YAML 1.1
 %TAG !u! tag:unity3d.com,2011:
+--- !u!1 &858837418
+GameObject:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  serializedVersion: 6
+  m_Component:
+  - component: {fileID: 858837419}
+  - component: {fileID: 858837420}
+  m_Layer: 0
+  m_Name: InteractionTrigger
+  m_TagString: Untagged
+  m_Icon: {fileID: 0}
+  m_NavMeshLayer: 0
+  m_StaticEditorFlags: 0
+  m_IsActive: 1
+--- !u!4 &858837419
+Transform:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 858837418}
+  m_LocalRotation: {x: 0, y: 0, z: 0, w: 1}
+  m_LocalPosition: {x: 0, y: 45.7, z: 0}
+  m_LocalScale: {x: 1, y: 1, z: 1}
+  m_Children: []
+  m_Father: {fileID: 5697420937351124224}
+  m_RootOrder: 4
+  m_LocalEulerAnglesHint: {x: 0, y: 0, z: 0}
+--- !u!136 &858837420
+CapsuleCollider:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 858837418}
+  m_Material: {fileID: 0}
+  m_IsTrigger: 1
+  m_Enabled: 1
+  m_Radius: 48.83
+  m_Height: 1
+  m_Direction: 2
+  m_Center: {x: 0, y: 0, z: 0}
 --- !u!1 &1432759175
 GameObject:
   m_ObjectHideFlags: 0
@@ -1911,6 +1956,7 @@ GameObject:
   - component: {fileID: 5243686270089247144}
   - component: {fileID: 4482175454738554048}
   - component: {fileID: 639988963699140837}
+  - component: {fileID: 564109703591456905}
   m_Layer: 0
   m_Name: Player
   m_TagString: Player
@@ -1933,6 +1979,7 @@ Transform:
   - {fileID: 5697420937351124350}
   - {fileID: 5697420937351124172}
   - {fileID: 1432759176}
+  - {fileID: 858837419}
   m_Father: {fileID: 0}
   m_RootOrder: 0
   m_LocalEulerAnglesHint: {x: 0, y: 0, z: 0}
@@ -1970,7 +2017,6 @@ MonoBehaviour:
   _walkingSpeed: 5
   _runningSpeed: 10
   _turnSpeed: 5
-  _jumpForce: 10
   _inspectKey: 101
   _runKey: 304
 --- !u!54 &4482175454738554048
@@ -2003,6 +2049,18 @@ CapsuleCollider:
   m_Height: 94.34365
   m_Direction: 1
   m_Center: {x: 0.59640706, y: 46.93653, z: -2.6412203}
+--- !u!114 &564109703591456905
+MonoBehaviour:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 5697420937350629664}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: e3ed4e335492bf349b6edd29584174ca, type: 3}
+  m_Name: 
+  m_EditorClassIdentifier: 
 --- !u!1 &5697420937350629666
 GameObject:
   m_ObjectHideFlags: 0
