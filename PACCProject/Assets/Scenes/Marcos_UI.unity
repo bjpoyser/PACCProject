@@ -38,7 +38,7 @@ RenderSettings:
   m_ReflectionIntensity: 1
   m_CustomReflection: {fileID: 0}
   m_Sun: {fileID: 0}
-  m_IndirectSpecularColor: {r: 0.44657898, g: 0.4964133, b: 0.5748178, a: 1}
+  m_IndirectSpecularColor: {r: 0.44657815, g: 0.49641192, b: 0.57481617, a: 1}
   m_UseRadianceAmbientProbe: 0
 --- !u!157 &3
 LightmapSettings:
@@ -585,7 +585,7 @@ Transform:
   m_PrefabInstance: {fileID: 0}
   m_PrefabAsset: {fileID: 0}
   m_GameObject: {fileID: 160660841}
-  m_LocalRotation: {x: 0.0024437783, y: -0.016226482, z: 0.000039659255, w: 0.9998654}
+  m_LocalRotation: {x: 0.002443779, y: -0.016226476, z: 0.000039659262, w: 0.99986535}
   m_LocalPosition: {x: 0, y: 0, z: 0}
   m_LocalScale: {x: 1, y: 1, z: 1}
   m_Children:
@@ -1824,7 +1824,7 @@ Transform:
   m_PrefabInstance: {fileID: 0}
   m_PrefabAsset: {fileID: 0}
   m_GameObject: {fileID: 394597393}
-  m_LocalRotation: {x: 0.0024437804, y: -0.01622648, z: 0.000039659244, w: 0.9998654}
+  m_LocalRotation: {x: 0.0024437804, y: -0.016226474, z: 0.00003965925, w: 0.99986535}
   m_LocalPosition: {x: 0.1807395, y: 1.31, z: -5.9930673}
   m_LocalScale: {x: 1, y: 1, z: 1}
   m_Children: []
@@ -3068,7 +3068,7 @@ Transform:
   m_PrefabInstance: {fileID: 0}
   m_PrefabAsset: {fileID: 0}
   m_GameObject: {fileID: 741862700}
-  m_LocalRotation: {x: -0.01569564, y: -0.016224533, z: -0.0002547193, w: 0.9997452}
+  m_LocalRotation: {x: -0.01569564, y: -0.016224498, z: -0.0002547187, w: 0.9997452}
   m_LocalPosition: {x: 0, y: 0, z: 0}
   m_LocalScale: {x: 1, y: 1, z: 1}
   m_Children:
@@ -3093,7 +3093,7 @@ GameObject:
   m_Icon: {fileID: 0}
   m_NavMeshLayer: 0
   m_StaticEditorFlags: 0
-  m_IsActive: 1
+  m_IsActive: 0
 --- !u!224 &764958993
 RectTransform:
   m_ObjectHideFlags: 0
@@ -3882,7 +3882,7 @@ GameObject:
   m_Icon: {fileID: 0}
   m_NavMeshLayer: 0
   m_StaticEditorFlags: 0
-  m_IsActive: 1
+  m_IsActive: 0
 --- !u!224 &1042309663
 RectTransform:
   m_ObjectHideFlags: 0
@@ -6663,6 +6663,7 @@ MonoBehaviour:
   m_Name: 
   m_EditorClassIdentifier: 
   pauseMenuUI: {fileID: 764958992}
+  descriptionBox: {fileID: 1042309662}
 --- !u!1 &2046941473
 GameObject:
   m_ObjectHideFlags: 0
