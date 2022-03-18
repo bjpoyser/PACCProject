@@ -174,7 +174,7 @@ GameObject:
   - component: {fileID: 5411584349255116206}
   - component: {fileID: 5445915018162042607}
   m_Layer: 0
-  m_Name: pizza_01 slice 01
+  m_Name: Pizza Slice
   m_TagString: Untagged
   m_Icon: {fileID: 0}
   m_NavMeshLayer: 0
