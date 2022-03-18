@@ -6,6 +6,7 @@ public class noteMenu : MonoBehaviour
 {
     public static bool GameIsPaused = false;
     public GameObject pauseMenuUI;
+    public GameObject descriptionBox;
 
     private void Update()
     {
@@ -24,13 +25,15 @@ public class noteMenu : MonoBehaviour
 
     void Resume()
     {
-        pauseMenuUI.SetActive(false);
+        descriptionBox.SetActive(false);
+        pauseMenuUI.SetActive(true);
         Time.timeScale = 1f;
         GameIsPaused = false;
     }
     void Pause()
     {
-        pauseMenuUI.SetActive(true);
+        descriptionBox.SetActive(true);
+        pauseMenuUI.SetActive(false);
         Time.timeScale = 0f;
         GameIsPaused = true;
     }
