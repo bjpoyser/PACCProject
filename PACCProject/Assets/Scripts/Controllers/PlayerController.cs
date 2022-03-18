@@ -1,6 +1,8 @@
+using Cinemachine;
 using System.Collections;
 using System.Collections.Generic;
 using UnityEngine;
+using UnityEngine.SceneManagement;
 
 public class PlayerController : MonoBehaviour
 {
@@ -32,6 +34,7 @@ public class PlayerController : MonoBehaviour
     private bool _canMove;
     private float _currentSpeed;
     private bool _isInteractionEnabled;
+    private bool _isCameraZoomed;
     private bool _isCollectig;
 
     //Vectors
@@ -41,6 +44,9 @@ public class PlayerController : MonoBehaviour
     //Camera
     private Transform _cameraTransform;
     private Vector3 _cameraForward;
+
+    [SerializeField] private CinemachineVirtualCamera _closeUpCamera;
+    [SerializeField] private CinemachineFreeLook _normalCamera;
     #endregion
 
     #region Properties
@@ -52,9 +58,13 @@ public class PlayerController : MonoBehaviour
     {
         Cursor.lockState = CursorLockMode.Locked;
         _canMove = true;
+        _isCameraZoomed = false;
         _animator = GetComponent<Animator>();
         _rigidBody = GetComponent<Rigidbody>();
         _cameraTransform = GameObject.FindObjectOfType<Camera>().transform;
+
+        _closeUpCamera.gameObject.SetActive(false);
+        _normalCamera.gameObject.SetActive(true);
     }
 
     private void Update()
@@ -105,17 +115,68 @@ public class PlayerController : MonoBehaviour
                 _rigidBody.MovePosition(_rigidBody.position + inputSpeed * _movementVector * _currentSpeed * Time.deltaTime);
             }
         }
+
+        if (_isCollectig)
+        {
+            if (InteractableObject.Instance != null)
+            {
+                var lookPos = InteractableObject.Instance.transform.position - transform.position;
+                lookPos.y = 0;
+                var rotation = Quaternion.LookRotation(lookPos);
+                transform.rotation = Quaternion.Slerp(transform.rotation, rotation, Time.deltaTime * _turnSpeed);
+            }
+        }
+
+        if (InteractableObject.Instance == null && _closeUpCamera.gameObject.activeInHierarchy)
+        {
+            Debug.Log("Cayo");
+            _canMove = !_canMove;
+            _isCameraZoomed = !_isCameraZoomed;
+            _isMoving = !_isCameraZoomed;
+            ZoomIn();
+        }
     }
 
-    private void Interaction()
+    public void Interaction()
     {
-        if (_isInteractionEnabled && Input.GetKeyDown(_inspectKey))
+        if (Input.GetKeyDown(_inspectKey) && InteractableObject.Instance != null)
         {
-            _isInteractionEnabled = false;
-            _canMove = false;
-            _isMoving = false;
-            _animator.SetBool(IS_INTERACTING, true);
-            _animator.SetTrigger(COLLECT_TRIGGER);
+            //_isInteractionEnabled = false;
+            _canMove = !_canMove;
+            _isCameraZoomed = !_isCameraZoomed;
+            _isMoving = !_isCameraZoomed;
+            ZoomIn();
+            /*_animator.SetBool(IS_INTERACTING, false);
+             _animator.SetTrigger(COLLECT_TRIGGER);*/
+        }
+
+        
+
+        if (Input.GetKeyDown(KeyCode.B))
+        {
+            SceneManager.LoadScene(0);
+        }
+    }
+
+    private void ZoomIn()
+    {
+        if (InteractableObject.Instance != null)
+        {
+            if (_isCameraZoomed)
+            {
+                _closeUpCamera.LookAt = InteractableObject.Instance.transform;
+                _animator.SetBool("IsMoving", false);
+                _isCollectig = true;
+            }
+            else
+            {
+                _closeUpCamera.LookAt = null;
+
+                _isCollectig = false;
+            }
+
+            _closeUpCamera.gameObject.SetActive(_isCameraZoomed);
+            _normalCamera.gameObject.SetActive(!_isCameraZoomed);
         }
     }
 
@@ -137,16 +198,16 @@ public class PlayerController : MonoBehaviour
 
     private void OnTriggerEnter(Collider other)
     {
-        if (other.CompareTag(INTERACTABLE_TAG) && other != InteractableObject.Instance)
+        if (other.CompareTag(INTERACTABLE_TAG) && other.GetComponentInParent<InteractableObject>() != InteractableObject.Instance)
         {
             _isInteractionEnabled = true;
-            other.GetComponent<InteractableObject>().SetAsCurrent();
+            other.GetComponentInParent<InteractableObject>().SetAsCurrent();
         }
     }
 
     private void OnTriggerExit(Collider other)
     {
-        if (other == InteractableObject.Instance)
+        if (other.CompareTag(INTERACTABLE_TAG) && other.GetComponentInParent<InteractableObject>() == InteractableObject.Instance)
         {
             _isInteractionEnabled = false;
             InteractableObject.Instance.CleanCurrent();

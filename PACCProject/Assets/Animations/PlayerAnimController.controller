@@ -144,9 +144,6 @@ AnimatorStateTransition:
   - m_ConditionMode: 2
     m_ConditionEvent: IsMoving
     m_EventTreshold: 0.1
-  - m_ConditionMode: 2
-    m_ConditionEvent: IsInteracting
-    m_EventTreshold: 0
   m_DstStateMachine: {fileID: 0}
   m_DstState: {fileID: 8545544879620784704}
   m_Solo: 0
