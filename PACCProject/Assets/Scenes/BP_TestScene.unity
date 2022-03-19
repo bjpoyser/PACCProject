@@ -932,6 +932,7 @@ MonoBehaviour:
   m_Name: 
   m_EditorClassIdentifier: 
   pauseMenuUI: {fileID: 203393275}
+  descriptionBox: {fileID: 0}
 --- !u!4 &1002509016 stripped
 Transform:
   m_CorrespondingSourceObject: {fileID: 3824209936339315571, guid: bb351091be09753429ec2558879269d4, type: 3}
@@ -2512,6 +2513,14 @@ PrefabInstance:
   m_Modification:
     m_TransformParent: {fileID: 0}
     m_Modifications:
+    - target: {fileID: 639988963699140837, guid: 45230c8fbec9ae048b8c62689329bf5f, type: 3}
+      propertyPath: m_Radius
+      value: 16.52
+      objectReference: {fileID: 0}
+    - target: {fileID: 639988963699140837, guid: 45230c8fbec9ae048b8c62689329bf5f, type: 3}
+      propertyPath: m_Center.y
+      value: 45.64
+      objectReference: {fileID: 0}
     - target: {fileID: 5243686270089247144, guid: 45230c8fbec9ae048b8c62689329bf5f, type: 3}
       propertyPath: _normalCamera
       value: 
