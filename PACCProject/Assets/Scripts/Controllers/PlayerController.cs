@@ -129,7 +129,6 @@ public class PlayerController : MonoBehaviour
 
         if (InteractableObject.Instance == null && _closeUpCamera.gameObject.activeInHierarchy)
         {
-            Debug.Log("Cayo");
             _canMove = !_canMove;
             _isCameraZoomed = !_isCameraZoomed;
             _isMoving = !_isCameraZoomed;
@@ -152,7 +151,7 @@ public class PlayerController : MonoBehaviour
 
         
 
-        if (Input.GetKeyDown(KeyCode.B))
+        if (Input.GetKeyDown(KeyCode.Escape))
         {
             SceneManager.LoadScene(0);
         }
