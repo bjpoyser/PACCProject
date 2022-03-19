@@ -21,10 +21,6 @@ namespace SojaExiles
         // Update is called once per frame
         void Update()
         {
-            if (Input.GetKeyDown(KeyCode.Escape))
-            {
-                SceneManager.LoadScene(0);
-            }
 
             float x = Input.GetAxis("Horizontal");
             float z = Input.GetAxis("Vertical");
