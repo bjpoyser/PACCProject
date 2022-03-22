@@ -38,7 +38,7 @@ RenderSettings:
   m_ReflectionIntensity: 1
   m_CustomReflection: {fileID: 0}
   m_Sun: {fileID: 0}
-  m_IndirectSpecularColor: {r: 0.44657815, g: 0.49641192, b: 0.57481617, a: 1}
+  m_IndirectSpecularColor: {r: 0.44657898, g: 0.4964133, b: 0.5748178, a: 1}
   m_UseRadianceAmbientProbe: 0
 --- !u!157 &3
 LightmapSettings:
@@ -193,7 +193,7 @@ MonoBehaviour:
     m_HorizontalOverflow: 0
     m_VerticalOverflow: 0
     m_LineSpacing: 0.74
-  m_Text: 'Lorem ipsum dolor sit amet, consectetur adipiscing elit. '
+  m_Text: Just an empty pizza box.
 --- !u!222 &3795290
 CanvasRenderer:
   m_ObjectHideFlags: 0
@@ -471,8 +471,7 @@ MonoBehaviour:
     m_HorizontalOverflow: 0
     m_VerticalOverflow: 0
     m_LineSpacing: 1
-  m_Text: Lorem ipsum dolor sit amet, consectetur adipiscing elit. Donec quis condimentum
-    enim,
+  m_Text: Just an empty pizza box.
 --- !u!222 &142801436
 CanvasRenderer:
   m_ObjectHideFlags: 0
@@ -585,7 +584,7 @@ Transform:
   m_PrefabInstance: {fileID: 0}
   m_PrefabAsset: {fileID: 0}
   m_GameObject: {fileID: 160660841}
-  m_LocalRotation: {x: 0.002443779, y: -0.016226476, z: 0.000039659262, w: 0.99986535}
+  m_LocalRotation: {x: 0.002443778, y: -0.016226446, z: 0.000039659168, w: 0.9998654}
   m_LocalPosition: {x: 0, y: 0, z: 0}
   m_LocalScale: {x: 1, y: 1, z: 1}
   m_Children:
@@ -961,7 +960,8 @@ MonoBehaviour:
     m_HorizontalOverflow: 0
     m_VerticalOverflow: 0
     m_LineSpacing: 0.74
-  m_Text: 'Lorem ipsum dolor sit amet, consectetur adipiscing elit. '
+  m_Text: 'The receipt had the same date of the crime a few hours after Elene was
+    found dead. '
 --- !u!222 &254460257
 CanvasRenderer:
   m_ObjectHideFlags: 0
@@ -1203,7 +1203,8 @@ MonoBehaviour:
     m_HorizontalOverflow: 0
     m_VerticalOverflow: 0
     m_LineSpacing: 0.74
-  m_Text: 'Lorem ipsum dolor sit amet, consectetur adipiscing elit. '
+  m_Text: Elena is deathly allergic to olives. Elena died instantly and her body
+    has been here for at least 2 days
 --- !u!222 &268394852
 CanvasRenderer:
   m_ObjectHideFlags: 0
@@ -1662,8 +1663,7 @@ MonoBehaviour:
     m_HorizontalOverflow: 0
     m_VerticalOverflow: 0
     m_LineSpacing: 1
-  m_Text: Lorem ipsum dolor sit amet, consectetur adipiscing elit. Donec quis condimentum
-    enim,
+  m_Text: Pizza seems to be a common meal on murder days.
 --- !u!222 &358702900
 CanvasRenderer:
   m_ObjectHideFlags: 0
@@ -1824,7 +1824,7 @@ Transform:
   m_PrefabInstance: {fileID: 0}
   m_PrefabAsset: {fileID: 0}
   m_GameObject: {fileID: 394597393}
-  m_LocalRotation: {x: 0.0024437804, y: -0.016226474, z: 0.00003965925, w: 0.99986535}
+  m_LocalRotation: {x: 0.0024437786, y: -0.016226444, z: 0.00003965913, w: 0.9998654}
   m_LocalPosition: {x: 0.1807395, y: 1.31, z: -5.9930673}
   m_LocalScale: {x: 1, y: 1, z: 1}
   m_Children: []
@@ -2017,7 +2017,7 @@ MonoBehaviour:
     m_HorizontalOverflow: 0
     m_VerticalOverflow: 0
     m_LineSpacing: 0.74
-  m_Text: 'Lorem ipsum dolor sit amet, consectetur adipiscing elit. '
+  m_Text: Someone with skill owned this gun.
 --- !u!222 &415041350
 CanvasRenderer:
   m_ObjectHideFlags: 0
@@ -2134,7 +2134,9 @@ MonoBehaviour:
     m_HorizontalOverflow: 0
     m_VerticalOverflow: 0
     m_LineSpacing: 1
-  m_Text: "Sam\u2019s Phone\r\n"
+  m_Text: 'Phone
+
+'
 --- !u!222 &423312334
 CanvasRenderer:
   m_ObjectHideFlags: 0
@@ -2213,7 +2215,10 @@ MonoBehaviour:
     m_HorizontalOverflow: 0
     m_VerticalOverflow: 0
     m_LineSpacing: 1
-  m_Text: "Sam\u2019s Credit Card\r\n\n"
+  m_Text: 'Credit Card
+
+
+'
 --- !u!222 &425782934
 CanvasRenderer:
   m_ObjectHideFlags: 0
@@ -2292,8 +2297,8 @@ MonoBehaviour:
     m_HorizontalOverflow: 0
     m_VerticalOverflow: 0
     m_LineSpacing: 1
-  m_Text: Lorem ipsum dolor sit amet, consectetur adipiscing elit. Donec quis condimentum
-    enim,
+  m_Text: Clearly this body has been here for at least 2 days. At least it was an
+    instant death.
 --- !u!222 &454423547
 CanvasRenderer:
   m_ObjectHideFlags: 0
@@ -2838,8 +2843,9 @@ MonoBehaviour:
     m_HorizontalOverflow: 0
     m_VerticalOverflow: 0
     m_LineSpacing: 1
-  m_Text: Lorem ipsum dolor sit amet, consectetur adipiscing elit. Donec quis condimentum
-    enim,
+  m_Text: 'Hum...
+
+    This seems to be Elena''s phone'
 --- !u!222 &631738855
 CanvasRenderer:
   m_ObjectHideFlags: 0
@@ -3532,7 +3538,7 @@ MonoBehaviour:
     m_HorizontalOverflow: 0
     m_VerticalOverflow: 0
     m_LineSpacing: 0.74
-  m_Text: 'Lorem ipsum dolor sit amet, consectetur adipiscing elit. '
+  m_Text: Sam left his credit card here with other things.
 --- !u!222 &953899760
 CanvasRenderer:
   m_ObjectHideFlags: 0
@@ -3686,7 +3692,7 @@ MonoBehaviour:
     m_HorizontalOverflow: 0
     m_VerticalOverflow: 0
     m_LineSpacing: 0.74
-  m_Text: 'Lorem ipsum dolor sit amet, consectetur adipiscing elit. '
+  m_Text: "Last message received: \"I\u2019m on my way, please wait for me...\""
 --- !u!222 &986695446
 CanvasRenderer:
   m_ObjectHideFlags: 0
@@ -3882,7 +3888,7 @@ GameObject:
   m_Icon: {fileID: 0}
   m_NavMeshLayer: 0
   m_StaticEditorFlags: 0
-  m_IsActive: 0
+  m_IsActive: 1
 --- !u!224 &1042309663
 RectTransform:
   m_ObjectHideFlags: 0
@@ -4131,7 +4137,10 @@ MonoBehaviour:
     m_HorizontalOverflow: 0
     m_VerticalOverflow: 0
     m_LineSpacing: 0.74
-  m_Text: 'Lorem ipsum dolor sit amet, consectetur adipiscing elit. '
+  m_Text: 'Last message received: "I need you, please come as soon
+
+    as possible,
+    I need to see you.."'
 --- !u!222 &1162792591
 CanvasRenderer:
   m_ObjectHideFlags: 0
@@ -4402,7 +4411,7 @@ Transform:
   m_PrefabInstance: {fileID: 0}
   m_PrefabAsset: {fileID: 0}
   m_GameObject: {fileID: 1231244526}
-  m_LocalRotation: {x: 0.020630416, y: -0.016223053, z: 0.00033480363, w: 0.9996555}
+  m_LocalRotation: {x: 0.020630417, y: -0.016223054, z: 0.00033480368, w: 0.9996555}
   m_LocalPosition: {x: 0, y: 0, z: 0}
   m_LocalScale: {x: 1, y: 1, z: 1}
   m_Children:
@@ -4706,7 +4715,7 @@ GameObject:
   m_Icon: {fileID: 0}
   m_NavMeshLayer: 0
   m_StaticEditorFlags: 0
-  m_IsActive: 1
+  m_IsActive: 0
 --- !u!224 &1434955784
 RectTransform:
   m_ObjectHideFlags: 0
@@ -5131,8 +5140,7 @@ MonoBehaviour:
     m_HorizontalOverflow: 0
     m_VerticalOverflow: 0
     m_LineSpacing: 1
-  m_Text: Lorem ipsum dolor sit amet, consectetur adipiscing elit. Donec quis condimentum
-    enim,
+  m_Text: Why would someone leave so many things and a credit card behind?
 --- !u!222 &1602485898
 CanvasRenderer:
   m_ObjectHideFlags: 0
@@ -5533,8 +5541,7 @@ MonoBehaviour:
     m_HorizontalOverflow: 0
     m_VerticalOverflow: 0
     m_LineSpacing: 1
-  m_Text: Lorem ipsum dolor sit amet, consectetur adipiscing elit. Donec quis condimentum
-    enim,
+  m_Text: Hmm, even with so many olives this pizza looks good.
 --- !u!222 &1707184981
 CanvasRenderer:
   m_ObjectHideFlags: 0
@@ -5613,7 +5620,7 @@ MonoBehaviour:
     m_HorizontalOverflow: 0
     m_VerticalOverflow: 0
     m_LineSpacing: 0.74
-  m_Text: 'Lorem ipsum dolor sit amet, consectetur adipiscing elit. '
+  m_Text: One last piece of pizza with several olives.
 --- !u!222 &1772181983
 CanvasRenderer:
   m_ObjectHideFlags: 0
@@ -5771,8 +5778,7 @@ MonoBehaviour:
     m_HorizontalOverflow: 0
     m_VerticalOverflow: 0
     m_LineSpacing: 1
-  m_Text: Lorem ipsum dolor sit amet, consectetur adipiscing elit. Donec quis condimentum
-    enim,
+  m_Text: Hmm... I think this is Sam's phone
 --- !u!222 &1834848511
 CanvasRenderer:
   m_ObjectHideFlags: 0
@@ -6429,7 +6435,9 @@ MonoBehaviour:
     m_HorizontalOverflow: 0
     m_VerticalOverflow: 0
     m_LineSpacing: 1
-  m_Text: "Elena\u2019s Phone\r\n"
+  m_Text: 'Phone
+
+'
 --- !u!222 &2030372511
 CanvasRenderer:
   m_ObjectHideFlags: 0
@@ -6930,8 +6938,7 @@ MonoBehaviour:
     m_HorizontalOverflow: 0
     m_VerticalOverflow: 0
     m_LineSpacing: 1
-  m_Text: Lorem ipsum dolor sit amet, consectetur adipiscing elit. Donec quis condimentum
-    enim,
+  m_Text: This is a nice gun. It takes some skills to handle it.
 --- !u!222 &2079499255
 CanvasRenderer:
   m_ObjectHideFlags: 0
