@@ -11,6 +11,8 @@ public class AlertBoxScript : MonoBehaviour
     public AudioClip alertClip;
     public AudioSource audioSource;
     public Image alertImage;
+    public GameObject item;
+    public GameObject itemNotebook;
     public Transform player;
     void Start()
     {
@@ -42,6 +44,9 @@ public class AlertBoxScript : MonoBehaviour
     {
         alertImage.gameObject.SetActive(true);
         audioSource.PlayOneShot(alertClip);
+        Item.collectable = item;
+        Item.collectableNotebook = itemNotebook;
+        Debug.Log("Item: " + item.name);
     }
 
     private void OnTriggerExit(Collider other)
