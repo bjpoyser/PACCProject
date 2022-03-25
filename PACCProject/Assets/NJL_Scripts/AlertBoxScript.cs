@@ -27,7 +27,7 @@ public class AlertBoxScript : MonoBehaviour
             Vector3 objectPos = new Vector3(this.transform.position.x, 0, this.transform.position.z);
             Vector3 playerPos = new Vector3(player.position.x, 0, player.position.z);
             float playerObjectAngle = Vector3.SignedAngle(this.player.forward, objectPos - playerPos, this.player.transform.up); //Vector3.Angle(playerPos.forward, this.transform.position - playerPos.position);
-            Debug.Log("Player is this far: " + playerObjectAngle);
+            //Debug.Log("Player is this far: " + playerObjectAngle);
             if(Mathf.Abs(playerObjectAngle) < 40)
             {
                 playerObjectAngle *= 20;
@@ -44,9 +44,9 @@ public class AlertBoxScript : MonoBehaviour
     {
         alertImage.gameObject.SetActive(true);
         audioSource.PlayOneShot(alertClip);
-        Item.collectable = item;
+        /*Item.collectable = item;
         Item.collectableNotebook = itemNotebook;
-        Debug.Log("Item: " + item.name);
+        Debug.Log("Item: " + item.name);*/
     }
 
     private void OnTriggerExit(Collider other)
