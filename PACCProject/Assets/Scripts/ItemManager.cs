@@ -13,10 +13,12 @@ public class ItemManager : MonoBehaviour
         {
             if (GameIsPaused)
             {
+                Cursor.lockState = CursorLockMode.Locked;
                 Resume();
             }
             else
             {
+                Cursor.lockState = CursorLockMode.None;
                 Pause();
             }
         }
@@ -24,18 +26,18 @@ public class ItemManager : MonoBehaviour
 
     void Resume()
     {
-        Item.collectable.SetActive(false);
+       // Item.collectable.SetActive(false);
         notebook.SetActive(false);
-        Item.collectableNotebook.SetActive(false);
+       // Item.collectableNotebook.SetActive(false);
         Time.timeScale = 1f;
         GameIsPaused = false;
     }
 
     void Pause()
     {
-        Item.collectable.SetActive(true);
+        //Item.collectable.SetActive(true);
         notebook.SetActive(true);
-        Item.collectableNotebook.SetActive(true);
+       // Item.collectableNotebook.SetActive(true);
         Time.timeScale = 0f;
         GameIsPaused = true;
     }

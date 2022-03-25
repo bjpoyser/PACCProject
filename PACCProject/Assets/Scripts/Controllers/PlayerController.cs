@@ -149,9 +149,7 @@ public class PlayerController : MonoBehaviour
              _animator.SetTrigger(COLLECT_TRIGGER);*/
         }
 
-        
-
-        if (Input.GetKeyDown(KeyCode.Escape))
+        if (Input.GetKeyDown(KeyCode.B))
         {
             SceneManager.LoadScene(0);
         }
@@ -166,11 +164,14 @@ public class PlayerController : MonoBehaviour
                 _closeUpCamera.LookAt = InteractableObject.Instance.transform;
                 _animator.SetBool("IsMoving", false);
                 _isCollectig = true;
+                Collect();
             }
             else
             {
-                _closeUpCamera.LookAt = null;
+                AlertBoxScript script = InteractableObject.Instance.transform.parent.GetComponentInChildren<AlertBoxScript>();
+                script.item.SetActive(false);
 
+                _closeUpCamera.LookAt = null;
                 _isCollectig = false;
             }
 
@@ -183,9 +184,11 @@ public class PlayerController : MonoBehaviour
     {
         if (InteractableObject.Instance != null)
         {
-            InteractableObject.Instance.gameObject.GetComponentInChildren<AlertBoxScript>().alertImage.gameObject.SetActive(false);
-            Destroy(InteractableObject.Instance.gameObject);
-            InteractableObject.Instance.CleanCurrent();
+            AlertBoxScript script = InteractableObject.Instance.transform.parent.GetComponentInChildren<AlertBoxScript>();
+            script.item.SetActive(true);
+            script.itemNotebook.SetActive(true);
+            //Destroy(InteractableObject.Instance.gameObject);
+            //InteractableObject.Instance.CleanCurrent();
         }
     }
 

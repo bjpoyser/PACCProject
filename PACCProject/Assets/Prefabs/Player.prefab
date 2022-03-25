@@ -1953,10 +1953,11 @@ GameObject:
   m_Component:
   - component: {fileID: 5697420937351124224}
   - component: {fileID: 5697420937343351520}
-  - component: {fileID: 5243686270089247144}
   - component: {fileID: 4482175454738554048}
   - component: {fileID: 639988963699140837}
+  - component: {fileID: 5243686270089247144}
   - component: {fileID: 564109703591456905}
+  - component: {fileID: 6027889793238334046}
   m_Layer: 0
   m_Name: Player
   m_TagString: Player
@@ -2002,25 +2003,6 @@ Animator:
   m_HasTransformHierarchy: 1
   m_AllowConstantClipSamplingOptimization: 1
   m_KeepAnimatorControllerStateOnDisable: 0
---- !u!114 &5243686270089247144
-MonoBehaviour:
-  m_ObjectHideFlags: 0
-  m_CorrespondingSourceObject: {fileID: 0}
-  m_PrefabInstance: {fileID: 0}
-  m_PrefabAsset: {fileID: 0}
-  m_GameObject: {fileID: 5697420937350629664}
-  m_Enabled: 1
-  m_EditorHideFlags: 0
-  m_Script: {fileID: 11500000, guid: 131044ba79c572447be4465074a273fc, type: 3}
-  m_Name: 
-  m_EditorClassIdentifier: 
-  _walkingSpeed: 5
-  _runningSpeed: 10
-  _turnSpeed: 5
-  _inspectKey: 101
-  _runKey: 304
-  _closeUpCamera: {fileID: 0}
-  _normalCamera: {fileID: 0}
 --- !u!54 &4482175454738554048
 Rigidbody:
   m_ObjectHideFlags: 0
@@ -2047,10 +2029,29 @@ CapsuleCollider:
   m_Material: {fileID: 0}
   m_IsTrigger: 0
   m_Enabled: 1
-  m_Radius: 10.8
+  m_Radius: 16.52
   m_Height: 94.34365
   m_Direction: 1
-  m_Center: {x: 0.59640706, y: 46.93653, z: -2.6412203}
+  m_Center: {x: 0.59640706, y: 45.64, z: -2.6412203}
+--- !u!114 &5243686270089247144
+MonoBehaviour:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 5697420937350629664}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: 131044ba79c572447be4465074a273fc, type: 3}
+  m_Name: 
+  m_EditorClassIdentifier: 
+  _walkingSpeed: 5
+  _runningSpeed: 10
+  _turnSpeed: 5
+  _inspectKey: 101
+  _runKey: 304
+  _closeUpCamera: {fileID: 0}
+  _normalCamera: {fileID: 0}
 --- !u!114 &564109703591456905
 MonoBehaviour:
   m_ObjectHideFlags: 0
@@ -2063,6 +2064,19 @@ MonoBehaviour:
   m_Script: {fileID: 11500000, guid: e3ed4e335492bf349b6edd29584174ca, type: 3}
   m_Name: 
   m_EditorClassIdentifier: 
+--- !u!114 &6027889793238334046
+MonoBehaviour:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 5697420937350629664}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: 4f23515ee2414bc49ae7e6cd89a648e0, type: 3}
+  m_Name: 
+  m_EditorClassIdentifier: 
+  _postprocess: {fileID: 0}
 --- !u!1 &5697420937350629666
 GameObject:
   m_ObjectHideFlags: 0
