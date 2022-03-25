@@ -5,9 +5,10 @@ using UnityEngine;
 
 public class PostProcesscontroller : MonoBehaviour
 {
-   
+
     [SerializeField] private PostProcessVolume _postprocess;
     ColorGrading colorGradingLayer = null;
+    public bool pPOn;
     bool toggle = false;
 
     // Start is called before the first frame update
@@ -24,5 +25,6 @@ public class PostProcesscontroller : MonoBehaviour
             colorGradingLayer.enabled.value = !colorGradingLayer.enabled.value;
         }
     }
-    
+
 }
+
