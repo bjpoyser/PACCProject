@@ -13,10 +13,12 @@ public class ItemManager : MonoBehaviour
         {
             if (GameIsPaused)
             {
+                Cursor.lockState = CursorLockMode.Locked;
                 Resume();
             }
             else
             {
+                Cursor.lockState = CursorLockMode.None;
                 Pause();
             }
         }

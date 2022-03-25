@@ -149,7 +149,7 @@ public class PlayerController : MonoBehaviour
              _animator.SetTrigger(COLLECT_TRIGGER);*/
         }
 
-        if (Input.GetKeyDown(KeyCode.Escape))
+        if (Input.GetKeyDown(KeyCode.B))
         {
             SceneManager.LoadScene(0);
         }
