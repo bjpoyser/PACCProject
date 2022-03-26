@@ -7,6 +7,13 @@ public class InteractableObject : MonoBehaviour
     private static InteractableObject instance;
     public static InteractableObject Instance { get { return instance; } }
 
+    public bool notFound;
+
+    private void Awake()
+    {
+        notFound = true;
+    }
+
     public void SetAsCurrent()
     {
         instance = this;

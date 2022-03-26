@@ -178,6 +178,13 @@ public class PlayerController : MonoBehaviour
             _closeUpCamera.gameObject.SetActive(_isCameraZoomed);
             _normalCamera.gameObject.SetActive(!_isCameraZoomed);
         }
+        else
+        {
+            _closeUpCamera.LookAt = null;
+            _isCollectig = false;
+            _closeUpCamera.gameObject.SetActive(_isCameraZoomed);
+            _normalCamera.gameObject.SetActive(!_isCameraZoomed);
+        }
     }
 
     private void Collect()
@@ -187,6 +194,8 @@ public class PlayerController : MonoBehaviour
             AlertBoxScript script = InteractableObject.Instance.transform.parent.GetComponentInChildren<AlertBoxScript>();
             script.item.SetActive(true);
             script.itemNotebook.SetActive(true);
+            if (InteractableObject.Instance.notFound) GameManager.Instance.currentFound++;
+            InteractableObject.Instance.notFound = false;
             //Destroy(InteractableObject.Instance.gameObject);
             //InteractableObject.Instance.CleanCurrent();
         }
@@ -200,16 +209,17 @@ public class PlayerController : MonoBehaviour
 
     private void OnTriggerEnter(Collider other)
     {
-        if (other.CompareTag(INTERACTABLE_TAG) && other.GetComponentInParent<InteractableObject>() != InteractableObject.Instance)
+        if (other.CompareTag(INTERACTABLE_TAG) && other.GetComponent<InteractableObject>() != null && other.GetComponent<InteractableObject>() != InteractableObject.Instance)
         {
             _isInteractionEnabled = true;
-            other.GetComponentInParent<InteractableObject>().SetAsCurrent();
+            other.GetComponent<InteractableObject>().enabled = _isInteractionEnabled;
+            other.GetComponent<InteractableObject>().SetAsCurrent();
         }
     }
 
     private void OnTriggerExit(Collider other)
     {
-        if (other.CompareTag(INTERACTABLE_TAG) && other.GetComponentInParent<InteractableObject>() == InteractableObject.Instance)
+        if (other.CompareTag(INTERACTABLE_TAG) && other.GetComponent<InteractableObject>() != null && other.GetComponent<InteractableObject>() == InteractableObject.Instance)
         {
             _isInteractionEnabled = false;
             InteractableObject.Instance.CleanCurrent();

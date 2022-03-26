@@ -5,6 +5,7 @@ using UnityEngine;
 public class Exiting : MonoBehaviour
 {
     public GameObject uiObject;
+    public GameObject HoldOn;
 
     // Start is called before the first frame update
     void Start()
@@ -16,7 +17,17 @@ public class Exiting : MonoBehaviour
     {
         if (player.gameObject.tag == "Player")
         {
-            uiObject.SetActive(true);
+            if(GameManager.Instance.MaxSelections <= GameManager.Instance.currentFound) uiObject.SetActive(true);
+            else HoldOn.SetActive(true);
+
+            Cursor.lockState = CursorLockMode.None;
+            Time.timeScale = 0;
         }
+    }
+
+    public void Lock()
+    {
+        Cursor.lockState = CursorLockMode.Locked;
+        Time.timeScale = 1;
     }
 }

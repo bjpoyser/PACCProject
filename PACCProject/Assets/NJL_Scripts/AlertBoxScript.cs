@@ -7,16 +7,17 @@ using UnityEngine.Audio;
 
 public class AlertBoxScript : MonoBehaviour
 {
+    public Transform player;
 
-
+    [Header("Alert")]
     public AudioClip alertClip;
     public AudioSource audioSource;
     public Image alertImage;
+
+    [Header("Canvas")]
     public GameObject item;
     public GameObject itemNotebook;
-    public Transform player;
-  
-
+    
     bool focusing = false;
     void Start()
     {
