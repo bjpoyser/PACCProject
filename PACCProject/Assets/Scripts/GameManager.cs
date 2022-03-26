@@ -8,12 +8,14 @@ public class GameManager : MonoBehaviour
     private static GameManager instance;
 
     private int _maxSelections = 3;
+    public int currentFound = 0;
     [SerializeField] private int _currentSelections = 0;
     [SerializeField] private List<ClueSelector> _clueSelctorList = new List<ClueSelector>();
     [SerializeField] private Button _guess;
     [SerializeField] private ClueSelector _firstRightClue;
     [SerializeField] private ClueSelector _secondRightClue;
     [SerializeField] private ClueSelector _thirdRightClue;
+    [SerializeField] private Guessing _guessing;
 
     public static GameManager Instance { get { return instance; } }
 
@@ -22,6 +24,8 @@ public class GameManager : MonoBehaviour
 
     private void Awake()
     {
+
+        Time.timeScale = 1;
         if (instance != null && instance != this) Destroy(gameObject);
         instance = this;
 
@@ -59,6 +63,13 @@ public class GameManager : MonoBehaviour
             }
         }
 
-        if (correctAnswers == 3) Debug.Log("You Win");
+        if (correctAnswers == 3)
+        {
+            _guessing.ShowWinScreen();
+        }
+        else
+        {
+            _guessing.ShowLosePopUp();
+        }
     }
 }

@@ -5,15 +5,14 @@ using UnityEngine.UI;
 
 public class ClueSelector : MonoBehaviour
 {
-    private Toggle _toggle;
+    [SerializeField] private Toggle _toggle;
     private bool _selected;
 
     public bool Selected { get => _selected; set => _selected = value; }
 
     private void Awake()
     {
-        _toggle = GetComponentInChildren<Toggle>();
-        if(_toggle != null)_toggle.onValueChanged.AddListener((value) => SelectCurrent(value));
+        _toggle.onValueChanged.AddListener((value) => SelectCurrent(value));
     }
 
     public void SelectCurrent(bool status)
